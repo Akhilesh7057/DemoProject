@@ -16,6 +16,7 @@ public class BasePage {
         WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.silentOutput","true");
         // Intialize Browser
+        
         driver = new ChromeDriver();
         driver.get("https://www.google.co.in/");
         //Maximize Window
