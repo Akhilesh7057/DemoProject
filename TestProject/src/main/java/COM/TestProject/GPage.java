@@ -12,22 +12,20 @@ public class GPage {
 
 
     By Search = By.name("q");
-    By Selenium= By.className("LC20lb DKV0Md");
-    //   By Child = By.xpath("//tr/td[1]");
+    By Selenium= By.xpath("//*[@id=\"rso\"]/div[1]/div/div[1]/a");
+    By SearchBtn = By.name("btnK");
 
     public GPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void Search(String SearchText) throws IOException, InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        Actions action = new Actions(driver);
-        //      js.executeScript("document.querySelector('div.a4bIc > input').click()",0);
         WebElement ser = driver.findElement(Search);
-        ser.click();
+        ser.sendKeys(SearchText);
+        Thread.sleep(1000);
+        WebElement Btn = driver.findElement(SearchBtn);
+        Btn.click();
         Thread.sleep(2000);
-     //   action.sendKeys(ser, Keys.chord(Keys.SHIFT, "selenium")).perform()
         WebElement Sel = driver.findElement(Selenium);
         Sel.click();
         
