@@ -14,6 +14,8 @@ public class BasePage {
     public void setup () {
         //Create a Chrome driver. All test classes use this.
         WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.silentOutput","true");
+
         // driver= new HtmlUnitDriver();
 //        options.addArguments("--incognito");
         driver = new ChromeDriver();
