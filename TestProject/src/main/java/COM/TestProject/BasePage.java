@@ -15,9 +15,7 @@ public class BasePage {
         //Create a Chrome driver. All test classes use this.
         WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.silentOutput","true");
-
-        // driver= new HtmlUnitDriver();
-//        options.addArguments("--incognito");
+        // Intialize Browser
         driver = new ChromeDriver();
         driver.get("https://www.google.co.in/");
         //Maximize Window

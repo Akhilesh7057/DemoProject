@@ -22,7 +22,7 @@ public class GPage {
     public void Search(String SearchText) throws IOException, InterruptedException {
         WebElement ser = driver.findElement(Search);
         ser.sendKeys(SearchText);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement Btn = driver.findElement(SearchBtn);
         Btn.click();
         Thread.sleep(2000);
